@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="algoritmob">
+    <title>Algoritimo B</title>
+</head>
+
+<body>
+    <h1>Resultado é:</h1>
+    <?php
+    $menor = $_POST["numero1"];
+    $meio = $_POST["numero2"];
+    $maior = $_POST["numero3"];
+
+    if ($meio > $menor) {
+        $valor = $menor;
+        $menor = $meio;
+        $meio = $valor;
+    }
+    if ($maior > $menor) {
+        $valor = $menor;
+        $menor = $maior;
+        $maior = $valor;
+    }
+    if ($maior > $meio) {
+        $valor = $meio;
+        $meio = $maior;
+        $maior = $valor;
+    }
+    echo "$menor < $meio < $maior";
+    ?>
+</body>
+
+</html>
